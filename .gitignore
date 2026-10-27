@@ -1,0 +1,28 @@
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data & Submissions (keep local)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+submissions/*
+!submissions/.gitkeep
+models/*
+!models/.gitkeep
+
+# OS generated
+.DS_Store
+Thumbs.db
