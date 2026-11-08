@@ -13,20 +13,33 @@ __pycache__/
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
-# Data & Submissions (keep local)
+# Data & Submissions (keep local / large binaries)
 data/raw/*
 !data/raw/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
 submissions/*
 !submissions/.gitkeep
+!submissions/README.md
+!submissions/submission_v95_optimal_station_adaptive_diurnal.csv
+!submissions/submission_v93_station_adaptive_diurnal_champion.csv
+!submissions/submission_v91_station_plus_diurnal_champion.csv
+!submissions/submission_v87_optimal_slope_champion.csv
+!submissions/submission_v85_exact_gradient_apex.csv
 models/*
 !models/.gitkeep
 
-# OS generated
+# Root large data duplicates
+/Train.csv
+zindi data/Phase 3 Train.csv
+zindi data/AdditionalHistory.zip
+
+# OS generated & temp files
 .DS_Store
 Thumbs.db
+*.png
+*.jpg
+*.zip
 
 # Model training artifacts
 catboost_info/
-
