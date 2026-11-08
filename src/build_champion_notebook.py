@@ -3,7 +3,7 @@ Generates the official, reproducible, clean Jupyter Notebook:
 Mumbai_AQI_Oracles_Champion_Verification.ipynb
 
 Team: AQI Oracles (Ganesh Patil, Pimpri Chinchwad University, Pune)
-Winning Score: 6.244600596 (Rank #1 Legitimate)
+Winning Score: 6.244600596
 """
 
 import json
@@ -285,13 +285,26 @@ def create_notebook():
             "# 3. Save Final Output\n",
             "out_filename = \"submission_v95_champion_reproduced.csv\"\n",
             "output_sub.to_csv(out_filename, index=False)\n",
+            "full_saved_path = os.path.abspath(out_filename)\n",
+            "file_size_bytes = os.path.getsize(out_filename)\n",
             "\n",
             "print(\"=\" * 75)\n",
             "print(\"🏆 VERIFICATION SUCCESSFUL: 100% BIT-LEVEL REPRODUCIBILITY CONFIRMED!\")\n",
-            "print(f\"File Saved: {out_filename}\")\n",
+            "print(f\"File Saved At Path: {full_saved_path}\")\n",
+            "print(f\"File Size:          {file_size_bytes:,} bytes | Rows: {len(output_sub):,}\")\n",
             "print(\"Public Score on Zindi: 6.244600596 RMSE (Real Rank #1 in India & Worldwide)\")\n",
             "print(\"Lead over legitimate Rank #2: -0.0666 ug/m³\")\n",
-            "print(\"=\" * 75)\n"
+            "print(\"=\" * 75)\n",
+            "\n",
+            "# 4. Automatic Colab Download Trigger & Download Instructions\n",
+            "try:\n",
+            "    from google.colab import files\n",
+            "    print(\"\\n📥 Automatically initiating browser download of: \" + out_filename)\n",
+            "    files.download(out_filename)\n",
+            "    print(\"✓ Check your browser's Downloads folder! If blocked by popup settings, you can also download directly from the Colab Files panel (left sidebar 📁).\")\n",
+            "except Exception:\n",
+            "    print(f\"\\n💡 File is ready at: {full_saved_path}\")\n",
+            "    print(\"You can open, copy, or submit this file directly.\")\n"
         ]
     })
 
