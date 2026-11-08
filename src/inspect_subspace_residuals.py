@@ -51,3 +51,4 @@ V_pinv5 = Vt_5.T @ np.diag(1.0 / S_5) @ U_5.T
 rec5 = V @ (V_pinv5 @ d_q)
 for n, act, pred in zip(names_other, d_q, rec5):
     print(f"  {n:5s}: actual d_q = {act:10.2f}, reconstructed = {pred:10.2f}, diff = {pred - act:+8.4f}")
+

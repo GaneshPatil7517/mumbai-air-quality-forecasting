@@ -69,3 +69,4 @@ U, S, Vt = np.linalg.svd(V, full_matrices=False)
 print("\nSingular values of V:", S)
 rank = np.sum(S > 1e-6)
 print(f"Rank of difference matrix: {rank}")
+

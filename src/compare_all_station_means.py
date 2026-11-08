@@ -19,3 +19,4 @@ for v in versions:
         print(f"--- {v} ({matches[0].split('/')[-1].split(chr(92))[-1]}) | Overall Mean: {overall:.4f} ---")
         for s, m in st_means.items():
             print(f"  Station {s}: {m:.2f}")
+

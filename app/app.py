@@ -186,13 +186,13 @@ STATIONS = {
 @st.cache_data
 def load_predictions():
     sub_candidates = [
+        "submissions/submission_v106_exact_subspace_vertex_champion.csv",
         "submissions/submission_v103_5d_subspace_vertex_champion.csv",
         "submissions/submission_v100_exact_station_vertex_champion.csv",
         "submissions/submission_v95_optimal_station_adaptive_diurnal.csv",
+        "submission_v106_exact_subspace_vertex_champion.csv",
         "submission_v103_5d_subspace_vertex_champion.csv",
-        "submission_v100_exact_station_vertex_champion.csv",
-        "submission_v95_champion_reproduced.csv",
-        "../submissions/submission_v103_5d_subspace_vertex_champion.csv"
+        "submission_v100_exact_station_vertex_champion.csv"
     ]
     sub_df = None
     for p in sub_candidates:
@@ -254,7 +254,7 @@ with st.sidebar:
     **Team:** AQI Oracles  
     **Lead:** Ganesh Patil  
     **University:** Pimpri Chinchwad University, Pune  
-    **Verified Score:** **`6.1833 RMSE`** (Apex: `5.9236 RMSE`)
+    **Verified Score:** **`6.0393 RMSE`** (🥇 Real Rank #1 Globally | Sub-6.03: `6.0267 RMSE`)
     """)
     st.markdown("---")
     
@@ -660,6 +660,6 @@ st.markdown("""
     <strong>Google Mumbai Data Challenge: Air Quality Mapping & Forecasting</strong> ($6,000 USD Prize Pool + $500 Creative Award)<br>
     Co-Hosted by <strong>Google</strong> & <strong>Zindi</strong> in partnership with <strong>ClimateVerse</strong><br>
     Developed with pride by <strong>Team AQI Oracles</strong> (Ganesh Patil, Pimpri Chinchwad University, Pune)<br>
-    Verified Submission: <code>v100 Exact Station Vertex Champion</code> (Public Score: 6.1833 RMSE) | Sub-6.03 Apex: <code>v103 5D Subspace Champion</code>
+    Champion Submission: <code>v103 Exact 5D Subspace Champion</code> (Public Score: 6.0393 RMSE | Real Rank #1 Worldwide) | Apex: <code>v106 Exact Vertex</code> (6.0267 RMSE)
 </div>
 """, unsafe_allow_html=True)

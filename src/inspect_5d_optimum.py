@@ -69,3 +69,4 @@ for s, df in test_act.groupby('station'):
 print("\nDay Means in 5D Optimum:")
 for d, df in test_act.groupby('day'):
     print(f"  Day {d}: Mean={df['Target'].mean():.2f}, Std={df['Target'].std():.2f}")
+

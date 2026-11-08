@@ -25,3 +25,4 @@ for name, path, score in sub_info:
     df = pd.read_csv(path)
     diff_non_active = np.max(np.abs(df.loc[~active, 'Target'].values - sample.loc[~active, 'Target'].values))
     print(f"{name}: diff on non-active rows vs sample = {diff_non_active:.6f}")
+

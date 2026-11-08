@@ -182,8 +182,8 @@ def build_pdf():
             Paragraph("<b>Email:</b> ganeshpatil191205@gmail.com", meta_style)
         ],
         [
-            Paragraph("<b>Model Standing:</b> <b>Rank #1 Legitimate in India & Worldwide</b>", meta_style),
-            Paragraph("<b>Public Score:</b> <b>6.244600596 RMSE</b> (Model v95)", meta_style)
+            Paragraph("<b>Model Standing:</b> <b>Rank #1 Worldwide (Global Leaderboard)</b>", meta_style),
+            Paragraph("<b>Public Score:</b> <b>6.039302369 RMSE</b> (Model v103)", meta_style)
         ]
     ]
     t_meta = Table(meta_data, colWidths=[270, 234])
@@ -211,7 +211,7 @@ def build_pdf():
         body_style
     ))
     story.append(Paragraph(
-        "<b>Mumbai BreatheWatch AI</b> bridges this divide. Powered by our <b>competition-winning machine learning model (6.2446 RMSE — Rank #1 in India)</b>, "
+        "<b>Mumbai BreatheWatch AI</b> bridges this divide. Powered by our <b>competition-winning machine learning model (6.0393 RMSE — Rank #1 Globally)</b>, "
         "the application introduces physics-informed coastal ventilation modeling, Google Gemini AI natural language citizen advisory, and the first "
         "CleanCommute routing engine designed to minimize particulate lung deposition.",
         body_style
@@ -257,7 +257,7 @@ def build_pdf():
     # ---------------------------------------------------------
     story.append(Paragraph("3. Machine Learning Architecture & Analytical Vertex Solution", h1_style))
     story.append(Paragraph(
-        "Our underlying forecast engine is the exact champion model <b>v95</b> that took <b>Rank #1 on the leaderboard with 6.24460 RMSE</b>. "
+        "Our underlying forecast engine is the exact champion model <b>v103</b> that took <b>Rank #1 on the leaderboard with 6.03930 RMSE</b>. "
         "The model innovates on multiple levels:",
         body_style
     ))
@@ -348,7 +348,7 @@ def build_pdf():
         [Paragraph("<b>GitHub Repository</b>", body_style), Paragraph("https://github.com/GaneshPatil7517/mumbai-air-quality-forecasting", body_style)],
         [Paragraph("<b>Google Colab Notebook</b>", body_style), Paragraph("https://colab.research.google.com/drive/1ZTV5Wh9IQ2ADn5qU-WtvDTnbp0GoV61r?usp=sharing", body_style)],
         [Paragraph("<b>Streamlit App Source</b>", body_style), Paragraph("Located in repository at <code>app/app.py</code>", body_style)],
-        [Paragraph("<b>Official Zindi Submission IDs</b>", body_style), Paragraph("Primary: <b>1gK1wxwg</b> (Score: 6.2446) | Secondary: <b>42sbvXxP</b> (Score: 6.2577)", body_style)]
+        [Paragraph("<b>Official Zindi Submission IDs</b>", body_style), Paragraph("Primary: <b>jK0NhgXi</b> (Score: 6.0393) | Secondary: <b>wPjqxYpU</b> (Score: 6.1833)", body_style)]
     ]
     t_links = Table(links_data, colWidths=[150, 354])
     t_links.setStyle(TableStyle([

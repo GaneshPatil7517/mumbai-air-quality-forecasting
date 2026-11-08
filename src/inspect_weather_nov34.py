@@ -18,3 +18,4 @@ for h in range(11, 20):
     ws3 = w_nov34[(w_nov34['day'] == 3) & (w_nov34['hour'] == h)]['wind_speed'].mean()
     ws4 = w_nov34[(w_nov34['day'] == 4) & (w_nov34['hour'] == h)]['wind_speed'].mean()
     print(f"Hour {h:02d}:00: Nov 3 = {ws3:5.2f} km/h | Nov 4 = {ws4:5.2f} km/h (diff = {ws4-ws3:+5.2f} km/h, {(ws4-ws3)/ws3*100:+5.1f}%)")
+

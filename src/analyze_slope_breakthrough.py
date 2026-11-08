@@ -24,3 +24,4 @@ print("\nDaily mean shifts (y86 - y85):")
 print(test_act.groupby('day')['d86_85'].mean())
 print("\nDaily mean shifts (y87 - y85):")
 print(test_act.groupby('day')['d87_85'].mean())
+

@@ -56,3 +56,4 @@ for leave_out in range(len(names)):
     actual_dq = q[test_idx] - q[b]
     
     print(f"Leave out {names[test_idx]:5s}: Actual dq = {actual_dq:10.2f}, Predicted dq = {pred_dq:10.2f}, diff = {pred_dq - actual_dq:+8.4f}")
+

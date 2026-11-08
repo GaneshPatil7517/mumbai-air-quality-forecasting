@@ -71,3 +71,4 @@ for s in sorted(test_act['station'].unique()):
     for d in [3, 4]:
         sub_d = test_act[(test_act['station'] == s) & (test_act['day'] == d)]
         print(f"  Station {s} Day {d}: Mean delta = {sub_d['delta'].mean():+.4f}")
+
