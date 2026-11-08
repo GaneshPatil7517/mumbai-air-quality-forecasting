@@ -1,11 +1,11 @@
-# 🏆 Google Mumbai Air Quality Forecasting Challenge ($6,000 USD Prize)
-## Team AQI Oracles — Rank #1 Legitimate Leaderboard Champion
+# 🏆 Google Mumbai Air Quality Forecasting Challenge
+## Team AQI Oracles  Legitimate Leaderboard Champion
 
 [![Platform: Zindi](https://img.shields.io/badge/Platform-Zindi-blue.svg)](https://zindi.world/competitions/google-mumbai-data-challenge)
 [![Team](https://img.shields.io/badge/Team-AQI%20Oracles-orange.svg)](https://zindi.world)
 [![Affiliation](https://img.shields.io/badge/University-Pimpri%20Chinchwad%20University%2C%20Pune-green.svg)](https://pcu.edu.in)
 [![Champion Score](https://img.shields.io/badge/RMSE-6.24460-brightgreen.svg)](https://zindi.world/competitions/google-mumbai-data-challenge/leaderboard)
-[![Status](https://img.shields.io/badge/Status-Rank%20%231%20Legitimate%20in%20India%20%26%20Global-gold.svg)](https://zindi.world)
+
 
 > **Task:** Develop high-precision spatio-temporal and atmospheric physics machine learning pipelines to forecast hourly $\text{PM}_{2.5}$ concentrations across 4 CPCB air quality monitoring stations in Mumbai.  
 > **Host:** Google  
@@ -17,15 +17,15 @@
 
 ---
 
-## 📊 Official Leaderboard Standing (as of 8 November 2026)
+## Official Leaderboard Standing (as of 8 November 2026)
 
 ```
 RANK   TEAM / COMPETITOR                            SCORE (RMSE)        AUDIT STATUS
-1      bambai                                       0.000000000         ❌ [Disqualified: Near-zero test GT memorization]
-2      Jisoo                                        2.29159e-15         ❌ [Disqualified: Near-zero test GT memorization]
-3      dhruvawani17                                 2.82085e-15         ❌ [Disqualified: Near-zero test GT memorization]
+1      bambai                                       0.000000000       
+2      Jisoo                                        2.29159e-15         
+3      dhruvawani17                                 2.82085e-15         
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-4 👑   AQI Oracles (Ganesh Patil, PCU Pune)         6.244600596         ✅ REAL RANK #1 IN INDIA & WORLDWIDE
+4 AQI Oracles (Ganesh Patil, PCU Pune)         6.244600596          REAL
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 5      out_of_your_league                           6.311201231         🥈 Legitimate Rank #2 (Trailed by -0.0666)
 6      dhruval30                                    6.500811339         🥉 Legitimate Rank #3 (Trailed by -0.2562)
@@ -37,7 +37,7 @@ RANK   TEAM / COMPETITOR                            SCORE (RMSE)        AUDIT ST
 
 ---
 
-## 🔒 Locked Private Leaderboard Selections on Zindi
+## Locked Private Leaderboard Selections on Zindi
 
 Both top submissions are officially saved and locked in Zindi's database for private holdout evaluation:
 1. 🥇 **Primary Selection:** `1gK1wxwg` — **`6.244600596`** (`v95 Optimal Station-Adaptive Diurnal Harmonics`)
@@ -62,7 +62,7 @@ Both top submissions are officially saved and locked in Zindi's database for pri
 
 ---
 
-## 🔬 Core Physical & Mathematical Innovations
+## Core Physical & Mathematical Innovations
 
 ```mermaid
 flowchart TD
@@ -72,7 +72,7 @@ flowchart TD
     D --> E["Microclimate Spatial Rebalancing<br/>(Byculla Harbor vs Malad/Shivaji Corridors s* = 0.3889)"]
     E --> F["Coastal Sea-Breeze & Diurnal Inversion Harmonics<br/>(Rush-hour inversion boost + afternoon sea-breeze)"]
     F --> G["Station-Adaptive Diurnal Resonance (α* = 0.4744)<br/>(Station-specific zero-sum daily profile)"]
-    G --> H["🏆 Champion Submission v95 (6.2446 RMSE)"]
+    G --> H["Champion Submission v95 (6.2446 RMSE)"]
 ```
 
 ### 1. The Exact Analytical Vertex Solver
@@ -94,7 +94,7 @@ Applying this closed-form optimum yielded **`6.244600596`** (matching the predic
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 ├── README.md                                          <- Project documentation & benchmark overview
@@ -121,7 +121,7 @@ Applying this closed-form optimum yielded **`6.244600596`** (matching the predic
 
 ---
 
-## 🚀 Reproduction & Verification
+## Reproduction & Verification
 
 To reproduce `submission_v95_optimal_station_adaptive_diurnal.csv` identically:
 
@@ -141,7 +141,7 @@ The script will output `submissions/submission_v95_optimal_station_adaptive_diur
 
 ---
 
-## 🏆 Team AQI Oracles
+## Team AQI Oracles
 - **Lead Competitor:** Ganesh Patil
 - **Institution:** Pimpri Chinchwad University (PCU), Pune, Maharashtra, India
 - **Competition:** Google Mumbai Data Challenge: Air Quality Mapping & Forecasting by Google ($6,000 USD)

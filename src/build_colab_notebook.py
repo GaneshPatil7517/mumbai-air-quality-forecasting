@@ -6,7 +6,7 @@ cells = [
         'cell_type': 'markdown',
         'metadata': {},
         'source': [
-            '# 🏆 Google Mumbai Data Challenge - AQI Oracles (Rank #1 Pipeline)\n',
+            '# 🏆 Google Mumbai Data Challenge - AQI Oracles \n',
             '**Team:** AQI Oracles (Ganesh Patil, Pimpri Chinchwad University, Pune)  \n',
             '**Notebook:** Version 33 Rank #1 Master Champion Pipeline  \n',
             '\n',

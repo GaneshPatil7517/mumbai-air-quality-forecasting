@@ -87,7 +87,7 @@ def main():
     print(f"File:               {out_file.name}")
     print(f"Current Score:      7.115066764 (AQI Oracles)")
     print(f"dhruval30 Score:    7.103730451 (Target)")
-    print(f"Expected Score:     ~7.098 - 7.102 (Rank #1 Winner)")
+    print(f"Expected Score:     ~7.098 - 7.102 ")
     print(f"Active Mean:        {p22[is_act].mean():.4f} ug/m3")
     print(f"Active Std:         {p22[is_act].std():.4f}")
     print(f"Active Min / Max:   {p22[is_act].min():.2f} / {p22[is_act].max():.2f} ug/m3")

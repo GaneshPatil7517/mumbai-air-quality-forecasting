@@ -62,3 +62,4 @@ streamlit run app/app.py
 This app is ready to deploy directly to:
 1. **Streamlit Community Cloud:** Connect your GitHub repo `GaneshPatil7517/mumbai-air-quality-forecasting` and set file path to `app/app.py`.
 2. **Hugging Face Spaces:** Create a new Streamlit Space and push the `app/` folder.
+

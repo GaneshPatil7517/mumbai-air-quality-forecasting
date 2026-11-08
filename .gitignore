@@ -31,6 +31,9 @@ models/*
 
 # Root large data duplicates
 /Train.csv
+/Test.csv
+/SampleSubmission.csv
+/submission_v95_*.csv
 zindi data/Phase 3 Train.csv
 zindi data/AdditionalHistory.zip
 
