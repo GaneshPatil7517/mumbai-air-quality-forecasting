@@ -186,10 +186,13 @@ STATIONS = {
 @st.cache_data
 def load_predictions():
     sub_candidates = [
+        "submissions/submission_v103_5d_subspace_vertex_champion.csv",
+        "submissions/submission_v100_exact_station_vertex_champion.csv",
         "submissions/submission_v95_optimal_station_adaptive_diurnal.csv",
+        "submission_v103_5d_subspace_vertex_champion.csv",
+        "submission_v100_exact_station_vertex_champion.csv",
         "submission_v95_champion_reproduced.csv",
-        "submission_v95_optimal_station_adaptive_diurnal.csv",
-        "../submissions/submission_v95_optimal_station_adaptive_diurnal.csv"
+        "../submissions/submission_v103_5d_subspace_vertex_champion.csv"
     ]
     sub_df = None
     for p in sub_candidates:
@@ -251,11 +254,11 @@ with st.sidebar:
     **Team:** AQI Oracles  
     **Lead:** Ganesh Patil  
     **University:** Pimpri Chinchwad University, Pune  
-    **Model Score:** **`6.2446 RMSE`**
+    **Verified Score:** **`6.1833 RMSE`** (Apex: `5.9236 RMSE`)
     """)
     st.markdown("---")
     
-    st.markdown("### ⚙️ Interactive Controls")
+    st.markdown("### Interactive Controls")
     all_stations = list(STATIONS.keys())
     selected_stations = st.multiselect(
         "Monitoring Stations:",
@@ -271,7 +274,7 @@ with st.sidebar:
     )
 
     st.markdown("---")
-    st.markdown("### 🛠️ Google Tools Utilized")
+    st.markdown("### Google Tools Utilized")
     st.markdown("""
     - **Google Gemini AI:** Hyperlocal health and commute reasoning assistant.
     - **Google Maps Cartography:** High-contrast urban spatial mapping.
@@ -657,6 +660,6 @@ st.markdown("""
     <strong>Google Mumbai Data Challenge: Air Quality Mapping & Forecasting</strong> ($6,000 USD Prize Pool + $500 Creative Award)<br>
     Co-Hosted by <strong>Google</strong> & <strong>Zindi</strong> in partnership with <strong>ClimateVerse</strong><br>
     Developed with pride by <strong>Team AQI Oracles</strong> (Ganesh Patil, Pimpri Chinchwad University, Pune)<br>
-    Champion Submission: <code>v95 Optimal Station-Adaptive Diurnal Harmonics</code> (Public Score: 6.2446 RMSE)
+    Verified Submission: <code>v100 Exact Station Vertex Champion</code> (Public Score: 6.1833 RMSE) | Sub-6.03 Apex: <code>v103 5D Subspace Champion</code>
 </div>
 """, unsafe_allow_html=True)
