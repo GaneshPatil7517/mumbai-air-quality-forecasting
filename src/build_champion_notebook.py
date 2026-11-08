@@ -43,7 +43,29 @@ def create_notebook():
     })
 
     # ---------------------------------------------------------
-    # Cell 2: Setup & Environment
+    # Cell 0: Colab Auto-Clone & Working Directory (Optional)
+    # ---------------------------------------------------------
+    cells.append({
+        "cell_type": "code",
+        "execution_count": None,
+        "metadata": {},
+        "outputs": [],
+        "source": [
+            "# Cell 0: Google Colab One-Click Data Sync\n",
+            "# If running on a fresh Google Colab instance, this automatically clones all required datasets and files:\n",
+            "import os\n",
+            "if not os.path.exists('Train.csv') and not os.path.exists('zindi data'):\n",
+            "    print('Cloning repository files into Colab environment...')\n",
+            "    !git clone https://github.com/GaneshPatil7517/mumbai-air-quality-forecasting.git\n",
+            "    %cd mumbai-air-quality-forecasting\n",
+            "    print('✓ Repository ready in:', os.getcwd())\n",
+            "else:\n",
+            "    print('✓ Files already present in working directory:', os.getcwd())\n"
+        ]
+    })
+
+    # ---------------------------------------------------------
+    # Cell 1: Environment Setup
     # ---------------------------------------------------------
     cells.append({
         "cell_type": "code",
@@ -91,8 +113,12 @@ def create_notebook():
             "    candidates = [\n",
             "        Path(fname),\n",
             "        Path(\"zindi data\") / fname,\n",
+            "        Path(\"submissions\") / fname,\n",
             "        Path(\"..\") / fname,\n",
-            "        Path(\"/content\") / fname\n",
+            "        Path(\"/content\") / fname,\n",
+            "        Path(\"/content/mumbai-air-quality-forecasting\") / fname,\n",
+            "        Path(\"/content/mumbai-air-quality-forecasting/zindi data\") / fname,\n",
+            "        Path(\"/content/mumbai-air-quality-forecasting/submissions\") / fname,\n",
             "    ]\n",
             "    for p in candidates:\n",
             "        if p.exists():\n",
