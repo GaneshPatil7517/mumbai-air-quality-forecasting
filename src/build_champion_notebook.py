@@ -51,20 +51,28 @@ def create_notebook():
         "metadata": {},
         "outputs": [],
         "source": [
-            "# Cell 0: Colab File Unpacking & Data Verification\n",
+            "# Cell 0: Automated 1-Click Cloud Data Sync\n",
+            "# Automatically downloads and extracts all competition datasets for ANY visitor in ANY browser:\n",
             "import os\n",
             "import zipfile\n",
             "from pathlib import Path\n",
             "\n",
-            "# If colab_files.zip is uploaded, extract it automatically:\n",
-            "if os.path.exists('colab_files.zip'):\n",
-            "    with zipfile.ZipFile('colab_files.zip', 'r') as z:\n",
-            "        z.extractall('.')\n",
-            "    print('✓ Successfully extracted colab_files.zip! All datasets ready.')\n",
-            "elif os.path.exists('Train.csv') or os.path.exists('zindi data/Train.csv'):\n",
-            "    print('✓ Required datasets found directly in working directory.')\n",
+            "if not os.path.exists('Train.csv'):\n",
+            "    print('📥 Downloading competition datasets from cloud (0.58 MB)...')\n",
+            "    try:\n",
+            "        import gdown\n",
+            "        gdown.download('https://drive.google.com/uc?export=download&id=12Az_MZpe2AAFZAj_ARctE7nT01HvM6JM', 'colab_files.zip', quiet=False)\n",
+            "    except Exception:\n",
+            "        !gdown --id '12Az_MZpe2AAFZAj_ARctE7nT01HvM6JM' -O colab_files.zip\n",
+            "\n",
+            "    if os.path.exists('colab_files.zip'):\n",
+            "        with zipfile.ZipFile('colab_files.zip', 'r') as z:\n",
+            "            z.extractall('.')\n",
+            "        print('✓ Successfully extracted colab_files.zip! All datasets ready.')\n",
+            "    else:\n",
+            "        print('Notice: Could not auto-download zip. Please ensure colab_files.zip is in working directory.')\n",
             "else:\n",
-            "    print('Notice: Please upload colab_files.zip (0.58 MB) to the Colab files pane (left sidebar 📁).')\n"
+            "    print('✓ Required datasets already present in working directory.')\n"
         ]
     })
 
