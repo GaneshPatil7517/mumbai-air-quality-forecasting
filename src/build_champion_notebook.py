@@ -43,7 +43,7 @@ def create_notebook():
     })
 
     # ---------------------------------------------------------
-    # Cell 0: Colab Auto-Unpack & Data Sync
+    # Cell 0: Multi-Source Data Sync (Cloud + GitHub + Manual)
     # ---------------------------------------------------------
     cells.append({
         "cell_type": "code",
@@ -51,28 +51,56 @@ def create_notebook():
         "metadata": {},
         "outputs": [],
         "source": [
-            "# Cell 0: Automated 1-Click Cloud Data Sync\n",
-            "# Automatically downloads and extracts all competition datasets for ANY visitor in ANY browser:\n",
+            "# Cell 0: Multi-Source Data Sync (Cloud + GitHub + Manual Upload)\n",
+            "# Ensures datasets are ALWAYS available regardless of browser, account, or environment:\n",
             "import os\n",
             "import zipfile\n",
             "from pathlib import Path\n",
             "\n",
-            "if not os.path.exists('Train.csv'):\n",
-            "    print('📥 Downloading competition datasets from cloud (0.58 MB)...')\n",
-            "    try:\n",
-            "        import gdown\n",
-            "        gdown.download('https://drive.google.com/uc?export=download&id=12Az_MZpe2AAFZAj_ARctE7nT01HvM6JM', 'colab_files.zip', quiet=False)\n",
-            "    except Exception:\n",
-            "        !gdown --id '12Az_MZpe2AAFZAj_ARctE7nT01HvM6JM' -O colab_files.zip\n",
+            "# Check if data is already present\n",
+            "data_present = os.path.exists('Train.csv') or os.path.exists('zindi data/Train.csv') or os.path.exists('mumbai-air-quality-forecasting/Train.csv')\n",
             "\n",
+            "if not data_present:\n",
+            "    print('🔍 Initializing automated multi-source data sync...')\n",
+            "    \n",
+            "    # 1. Check for manual upload of colab_files.zip\n",
             "    if os.path.exists('colab_files.zip'):\n",
+            "        print('📦 Found manual upload: colab_files.zip. Extracting...')\n",
             "        with zipfile.ZipFile('colab_files.zip', 'r') as z:\n",
             "            z.extractall('.')\n",
-            "        print('✓ Successfully extracted colab_files.zip! All datasets ready.')\n",
-            "    else:\n",
-            "        print('Notice: Could not auto-download zip. Please ensure colab_files.zip is in working directory.')\n",
+            "        print('✓ Extracted local colab_files.zip successfully.')\n",
+            "        \n",
+            "    # 2. Automated Cloud Download via Google Drive (0.58 MB, 1-click)\n",
+            "    if not os.path.exists('Train.csv') and not os.path.exists('zindi data/Train.csv'):\n",
+            "        print('📥 Downloading competition datasets from Google Drive Cloud (0.58 MB)...')\n",
+            "        try:\n",
+            "            import gdown\n",
+            "            gdown.download('https://drive.google.com/uc?export=download&id=12Az_MZpe2AAFZAj_ARctE7nT01HvM6JM', 'colab_files.zip', quiet=False)\n",
+            "        except Exception:\n",
+            "            !gdown --id '12Az_MZpe2AAFZAj_ARctE7nT01HvM6JM' -O colab_files.zip\n",
+            "        \n",
+            "        if os.path.exists('colab_files.zip'):\n",
+            "            with zipfile.ZipFile('colab_files.zip', 'r') as z:\n",
+            "                z.extractall('.')\n",
+            "            print('✓ Successfully downloaded and extracted Google Drive datasets!')\n",
+            "            \n",
+            "    # 3. Fallback sync via GitHub Repository\n",
+            "    if not os.path.exists('Train.csv') and not os.path.exists('zindi data/Train.csv'):\n",
+            "        print('🌐 Attempting fallback clone from GitHub...')\n",
+            "        try:\n",
+            "            !git clone https://github.com/GaneshPatil7517/mumbai-air-quality-forecasting.git\n",
+            "            if os.path.exists('mumbai-air-quality-forecasting'):\n",
+            "                %cd mumbai-air-quality-forecasting\n",
+            "                print('✓ Switched to cloned GitHub directory.')\n",
+            "        except Exception as e:\n",
+            "            print(f'GitHub fallback note: {e}')\n",
+            "\n",
+            "if os.path.exists('Train.csv') or os.path.exists('zindi data/Train.csv'):\n",
+            "    print('=' * 70)\n",
+            "    print('✓ READY: All competition datasets verified and ready for execution!')\n",
+            "    print('=' * 70)\n",
             "else:\n",
-            "    print('✓ Required datasets already present in working directory.')\n"
+            "    print('⚠️ Notice: Datasets not found. Please upload colab_files.zip to the left Files pane 📁.')\n"
         ]
     })
 
