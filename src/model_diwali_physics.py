@@ -107,3 +107,4 @@ print("\nNov 8 Peak Firecracker Hours (20:00 - 23:00) Mean by Station:")
 for s in ['11606', '11611', '3409510', '3409511']:
     peak_m = test_78[(test_78['station']==s) & (test_78['day']==8) & (test_78['hour']>=20)]['diwali_pred'].mean()
     print(f"  Station {s}: {peak_m:.1f} ug/m3")
+

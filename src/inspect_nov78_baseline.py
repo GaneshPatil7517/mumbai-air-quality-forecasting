@@ -23,3 +23,4 @@ train = pd.read_csv('Train Phase 4.csv')
 train['dt'] = pd.to_datetime(train['timestamp_ist'])
 nov56 = train[(train['dt'] >= '2026-11-05') & (train['dt'] < '2026-11-07')]
 print(nov56.groupby('location_id')['pm25'].mean())
+
