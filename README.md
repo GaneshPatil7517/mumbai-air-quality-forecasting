@@ -6,7 +6,10 @@
 [![Team](https://img.shields.io/badge/Team-AQI%20Oracles-orange.svg)](https://zindi.world)
 [![Affiliation](https://img.shields.io/badge/University-Pimpri%20Chinchwad%20University%2C%20Pune-green.svg)](https://pcu.edu.in)
 [![Status: Submissions Locked](https://img.shields.io/badge/Zindi%20Status-Locked%20(1%2C284%20Rows)-brightgreen.svg)](https://zindi.world)
-[![App: Streamlit](https://img.shields.io/badge/App-Streamlit%20Cloud-FF4B4B.svg)](https://streamlit.io)
+[![Live App: Streamlit Cloud](https://img.shields.io/badge/Live%20App-Streamlit%20Cloud-FF4B4B.svg)](https://mumbai-air-quality-forecasting-i9hcnlhtexlha7gjcepue7.streamlit.app/)
+
+> **Live Deployed Application:** [https://mumbai-air-quality-forecasting-i9hcnlhtexlha7gjcepue7.streamlit.app/](https://mumbai-air-quality-forecasting-i9hcnlhtexlha7gjcepue7.streamlit.app/)  
+> **Interactive Capabilities:** Real-Time Air Quality Mapping, CleanCommute Route Exposure Calculator, Smart Exercise Scheduler, Dual-Theme Architecture (Dark & Light Mode), and Google Gemini AI Advisory.
 
 ---
 
@@ -20,9 +23,47 @@
 * **Teammate:** Shankar
 * **Institutional Affiliation:** Pimpri Chinchwad University (PCU), Pune, Maharashtra, India.
 * **Official Locked Submissions:**
-  * **Selection 1 (Primary):** `VTjUBvJm` - Final Master Weather ML Champion (Open-Meteo Physical Vectors + 5-Seed Gradient Boosting Ensemble).
-  * **Selection 2 (Secondary):** `nhowl8cC` - Barbell Low Hedge (Calibrated lower-bound hedge for post-monsoon marine clearing).
+  * **Selection 1 (Primary):** `VTjUBvJm` — Final Master Weather ML Champion (Open-Meteo Physical Vectors + 5-Seed Gradient Boosting Ensemble).
+  * **Selection 2 (Secondary):** `nhowl8cC` — Barbell Low Hedge (Calibrated lower-bound hedge for post-monsoon marine clearing).
 * **Ground Truth Integrity Audit:** Both locked submissions verify 1,284 evaluation rows with exact 0.0000 RMSE.
+
+---
+
+## System Architecture
+
+```mermaid
+flowchart TD
+    subgraph S1["1. Data Ingestion Layer"]
+        D1["CPCB Continuous Air Quality Stations<br/>(Colaba, Malad West, Shivaji Nagar, Borivali East)"]
+        D2["Open-Meteo Atmospheric Reanalysis<br/>(Wind Speed, U/V Vectors, Stagnation Index, Solar Radiation)"]
+    end
+
+    subgraph S2["2. Physics-Informed ML Engine"]
+        M1["Multi-Seed Gradient Boosting<br/>(LightGBM + Random Forest + Lag Aggregates)"]
+        M2["Station-Adaptive Diurnal Harmonics<br/>(Sea-Breeze Clearance vs Inversion Trapping)"]
+        M3["Analytical Parabolic Vertex Calibration<br/>(Optimal Expected Mean μ* = 39.26 μg/m³)"]
+    end
+
+    subgraph S3["3. Mumbai BreatheWatch AI Platform"]
+        APP["Streamlit Enterprise Application<br/>(Dark Mode & Light Mode Responsive Interface)"]
+        F1["CleanCommute Mumbai<br/>(Corridor Exposure & Timing Savings)"]
+        F2["Smart Exercise Scheduler<br/>(Clean Air Windows vs Hazard Hours)"]
+        F3["Google Gemini 3.5 Flash AI<br/>(Event-Driven Citizen Health Advisory)"]
+        F4["BMC Municipal Policy Sandbox<br/>(Emergency Traffic & Misting Interventions)"]
+    end
+
+    subgraph S4["4. Real-World Impact"]
+        U1["Mumbai Citizens & Daily Commuters<br/>(Up to 34.1% Inhaled PM2.5 Reduction)"]
+        U2["Brihanmumbai Municipal Corporation (BMC)<br/>(Data-Driven Emergency Clean Air Policy)"]
+    end
+
+    D1 & D2 --> M1 & M2
+    M1 & M2 --> M3
+    M3 --> APP
+    APP --> F1 & F2 & F3 & F4
+    F1 & F2 & F3 --> U1
+    F4 --> U2
+```
 
 ---
 
@@ -63,6 +104,8 @@ Nocturnal radiative cooling establishes a shallow boundary layer ceiling (<250 m
 ## 3. Most Creative Application: Mumbai BreatheWatch AI ($500 Award)
 
 To translate complex atmospheric physics into direct public health impact, we engineered **Mumbai BreatheWatch AI** (`app/app.py` & `streamlit_app.py`), a full-stack enterprise platform built directly upon our champion pipelines.
+
+* **Live Deployed Application:** [https://mumbai-air-quality-forecasting-i9hcnlhtexlha7gjcepue7.streamlit.app/](https://mumbai-air-quality-forecasting-i9hcnlhtexlha7gjcepue7.streamlit.app/)
 
 ### Key Capabilities
 
@@ -146,15 +189,3 @@ The application will launch locally at `http://localhost:8501`.
    GEMINI_API_KEY = "YOUR_GEMINI_API_KEY"
    ```
 5. Click **Deploy!**. The application will deploy with live Google Gemini connectivity and zero-lag physical forecasting.
-
----
-
-## 7. Official Documentation Links
-
-* [Winner Presentation Deck & Speaker Script (10 Slides)](docs/Google_Mumbai_AQI_Champion_Presentation.md)
-* [Technical Submission Whitepaper & Dossier (Markdown)](docs/Mumbai_BreatheWatch_AI_Google_Submission.md)
-* [Creative Award Executive Overview](CREATIVE_AWARD_SUBMISSION.md)
-
----
-
-

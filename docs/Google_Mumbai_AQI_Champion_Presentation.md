@@ -6,7 +6,6 @@
 * **Team Leader & Presenter:** Ganesh Patil
 * **Teammate:** Shankar
 * **Institution:** Pimpri Chinchwad University (PCU), Pune, Maharashtra
-* **Prize Categories:** Grand Champion ($6,000 USD) & Most Creative Application Prize ($500 USD)
 * **Final Presentation Date:** 20 November 2026 | Mumbai, Maharashtra
 
 ---
