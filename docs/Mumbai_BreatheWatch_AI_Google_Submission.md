@@ -15,11 +15,50 @@
 | **Team Leader** | Ganesh Patil |
 | **Teammate** | Shankar |
 | **Institutional Affiliation** | Pimpri Chinchwad University (PCU), Pune, Maharashtra |
+| **Live Deployed Application** | https://mumbai-air-quality-forecasting-i9hcnlhtexlha7gjcepue7.streamlit.app/ |
 | **Official Selected Submissions** | Selection 1: `VTjUBvJm` (Master Weather ML Champion) <br> Selection 2: `nhowl8cC` (Barbell Low Hedge) |
 | **Ground Truth Audit** | 1,284 Locked Observations (0.0000 RMSE) |
 | **GitHub Repository** | https://github.com/GaneshPatil7517/mumbai-air-quality-forecasting |
-| **Application Source** | `app/app.py` (Streamlit Enterprise Web Application) |
+| **Application Source** | `app/app.py` & `streamlit_app.py` (Streamlit Enterprise Web Application) |
 | **Evaluation Window** | 11-12 November 2026 (Unseen 192 Station-Hours Private Test Block) |
+
+---
+
+## System Architecture
+
+```mermaid
+flowchart TD
+    subgraph S1["1. Data Ingestion Layer"]
+        D1["CPCB Continuous Air Quality Stations<br/>(Colaba, Malad West, Shivaji Nagar, Borivali East)"]
+        D2["Open-Meteo Atmospheric Reanalysis<br/>(Wind Speed, U/V Vectors, Stagnation Index, Solar Radiation)"]
+    end
+
+    subgraph S2["2. Physics-Informed ML Engine"]
+        M1["Multi-Seed Gradient Boosting<br/>(LightGBM + Random Forest + Lag Aggregates)"]
+        M2["Station-Adaptive Diurnal Harmonics<br/>(Sea-Breeze Clearance vs Inversion Trapping)"]
+        M3["Analytical Parabolic Vertex Calibration<br/>(Optimal Expected Mean μ* = 39.26 μg/m³)"]
+    end
+
+    subgraph S3["3. Mumbai BreatheWatch AI Platform"]
+        APP["Streamlit Enterprise Application<br/>(Dark Mode & Light Mode Responsive Interface)"]
+        F1["CleanCommute Mumbai<br/>(Corridor Exposure & Timing Savings)"]
+        F2["Smart Exercise Scheduler<br/>(Clean Air Windows vs Hazard Hours)"]
+        F3["Google Gemini 3.5 Flash AI<br/>(Event-Driven Citizen Health Advisory)"]
+        F4["BMC Municipal Policy Sandbox<br/>(Emergency Traffic & Misting Interventions)"]
+    end
+
+    subgraph S4["4. Public & Municipal Impact"]
+        U1["Mumbai Citizens & Daily Commuters<br/>(Up to 34.1% Inhaled PM2.5 Reduction)"]
+        U2["Brihanmumbai Municipal Corporation (BMC)<br/>(Data-Driven Emergency Clean Air Policy)"]
+    end
+
+    D1 & D2 --> M1 & M2
+    M1 & M2 --> M3
+    M3 --> APP
+    APP --> F1 & F2 & F3 & F4
+    F1 & F2 & F3 --> U1
+    F4 --> U2
+```
 
 ---
 
@@ -32,6 +71,8 @@ Existing consumer air quality applications fail Mumbai citizens in two fundament
 2. **Temporal Passivity:** Commercial tools report air quality retrospectively (what happened 2 hours ago) rather than providing actionable forward forecast horizons that help individuals plan commute times, outdoor exertion, and medical precautions.
 
 **Mumbai BreatheWatch AI** directly solves this challenge. Built upon our competition-grade machine learning pipelines (`VTjUBvJm` and `nhowl8cC`), the platform operationalizes physics-informed meteorology, real Open-Meteo atmospheric wind vectors, Google Gemini AI natural language citizen advisory, and the first CleanCommute routing exposure engine designed to minimize cumulative particulate inhalation.
+
+* **Live Deployed URL:** https://mumbai-air-quality-forecasting-i9hcnlhtexlha7gjcepue7.streamlit.app/
 
 ---
 
@@ -82,7 +123,7 @@ In alignment with the Google Mumbai Data Challenge creative criteria, Mumbai Bre
 
 | Google Technology | Application Role | Operational Value |
 | :--- | :--- | :--- |
-| **Google Gemini AI** | Conversational Environmental Intelligence | Translates complex atmospheric vectors and medical thresholds into natural, empathetic citizen advice. Handles vulnerable group queries (pediatric asthma, senior health, window ventilation, school sports). Includes automated server-side filters to enforce institutional formatting without emojis. |
+| **Google Gemini AI** | Conversational Environmental Intelligence | Translates complex atmospheric vectors and medical thresholds into natural, empathetic citizen advice. Handles vulnerable group queries (pediatric asthma, senior health, window ventilation, school sports). Includes automated server-side filters to enforce institutional formatting without emojis and event-driven invocation on Enter. |
 | **Google Maps Cartography** | Geospatial Visualization Engine | Powers interactive geospatial mapping with color-coded CPCB index bands, station hover breakdowns, and marine wind ventilation compass vectors. |
 | **Google Colab Cloud** | Automated Verification & Reproducibility | Complete pipeline scripts execute in standard Google Colab environments with zero external proprietary dependencies, enabling immediate verification by judges in under 10 seconds. |
 
@@ -118,11 +159,11 @@ Enables urban planners at the Brihanmumbai Municipal Corporation (BMC) to simula
 ## 6. Official Verification Links & Finalist Confirmation
 
 ### 6.1 Project Access Links
+* **Live Deployed Application:** https://mumbai-air-quality-forecasting-i9hcnlhtexlha7gjcepue7.streamlit.app/
 * **GitHub Repository:** https://github.com/GaneshPatil7517/mumbai-air-quality-forecasting
-* **Application Script:** `app/app.py`
+* **Application Source Code:** `app/app.py` & `streamlit_app.py`
 * **Forecast Dataset Export:** Built-in one-click CSV export with complete 48-hour station trajectories, wind speed vectors, and stagnation parameters.
 
 ### 6.2 Formal Finalist Event Attendance Confirmation
 As resident students at Pimpri Chinchwad University (PCU) in Pune, Maharashtra, located approximately 2.5 hours from Mumbai via the Mumbai-Pune Expressway:
 **Team AQI Oracles (Ganesh Patil & Shankar) formally confirms 100% in-person availability to attend and present our champion machine learning solution and the Mumbai BreatheWatch AI platform at the Google Finalists' Event in Mumbai on 20 November 2026.**
-
