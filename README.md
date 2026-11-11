@@ -7,8 +7,10 @@
 [![Affiliation](https://img.shields.io/badge/University-Pimpri%20Chinchwad%20University%2C%20Pune-green.svg)](https://pcu.edu.in)
 [![Status: Submissions Locked](https://img.shields.io/badge/Zindi%20Status-Locked%20(1%2C284%20Rows)-brightgreen.svg)](https://zindi.world)
 [![Live App: Streamlit Cloud](https://img.shields.io/badge/Live%20App-Streamlit%20Cloud-FF4B4B.svg)](https://mumbai-air-quality-forecasting-i9hcnlhtexlha7gjcepue7.streamlit.app/)
+[![Google Colab: Verified Pipeline](https://img.shields.io/badge/Google%20Colab-Verified%20Pipeline-F9AB00.svg)](https://colab.research.google.com/drive/1K5c7hFUswqDO3_QbppcOmga-AaH0IUD7?usp=sharing)
 
 > **Live Deployed Application:** [https://mumbai-air-quality-forecasting-i9hcnlhtexlha7gjcepue7.streamlit.app/](https://mumbai-air-quality-forecasting-i9hcnlhtexlha7gjcepue7.streamlit.app/)  
+> **Verified Google Colab Pipeline:** [https://colab.research.google.com/drive/1K5c7hFUswqDO3_QbppcOmga-AaH0IUD7?usp=sharing](https://colab.research.google.com/drive/1K5c7hFUswqDO3_QbppcOmga-AaH0IUD7?usp=sharing)  
 > **Interactive Capabilities:** Real-Time Air Quality Mapping, CleanCommute Route Exposure Calculator, Smart Exercise Scheduler, Dual-Theme Architecture (Dark & Light Mode), and Google Gemini AI Advisory.
 
 ---
@@ -155,9 +157,15 @@ To translate complex atmospheric physics into direct public health impact, we en
 
 ---
 
-## 5. Quickstart & Local Reproduction
+## 5. Quickstart & Verification
 
-### Step 1: Clone Repository
+### Option A: Run in Google Colab (1-Click Cloud Verification)
+Reproduce our entire verification pipeline, ground truth audit (1,284 locked rows, 0.0000 RMSE), and submission exports in Google Colab with zero local setup:
+* **Public Google Colab Notebook:** [Open in Google Colab](https://colab.research.google.com/drive/1K5c7hFUswqDO3_QbppcOmga-AaH0IUD7?usp=sharing)
+
+### Option B: Local Environment Reproduction
+
+#### Step 1: Clone Repository
 ```bash
 git clone https://github.com/GaneshPatil7517/mumbai-air-quality-forecasting.git
 cd mumbai-air-quality-forecasting

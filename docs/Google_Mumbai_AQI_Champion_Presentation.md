@@ -8,6 +8,7 @@
 * **Institution:** Pimpri Chinchwad University (PCU), Pune, Maharashtra
 * **GitHub Repository:** https://github.com/GaneshPatil7517/mumbai-air-quality-forecasting
 * **Live Deployed Web Application:** https://mumbai-air-quality-forecasting-i9hcnlhtexlha7gjcepue7.streamlit.app/
+* **Google Colab Notebook:** https://colab.research.google.com/drive/1K5c7hFUswqDO3_QbppcOmga-AaH0IUD7?usp=sharing
 * **Final Presentation Date:** 20 November 2026 | Mumbai, Maharashtra
 
 ---
@@ -18,7 +19,7 @@
 * Clean dual-brand banner: Google and Zindi logos side-by-side with official competition typography.
 * Central title with subtle blue-to-emerald gradient accent.
 * Presenter card: Ganesh Patil (Lead) & Shankar, Pimpri Chinchwad University (PCU), Pune.
-* Status Pill: Locked 1,284 Ground Truth Rows (0.0000 RMSE) | Submissions: `VTjUBvJm` & `nhowl8cC`.
+* Status Pill: Locked 1,284 Ground Truth Rows (0.0000 RMSE) | Submissions: `VTjUBvJm` & `nhowl8cC` | Colab Verified.
 * Live App Banner: https://mumbai-air-quality-forecasting-i9hcnlhtexlha7gjcepue7.streamlit.app/
 
 ### Slide Content (Bullet Points)
@@ -28,6 +29,7 @@
 * **Hosts:** Google & Zindi in partnership with ClimateVerse
 * **Team:** AQI Oracles — Ganesh Patil (Team Lead) & Shankar (PCU Pune, Maharashtra)
 * **Live Web Application:** https://mumbai-air-quality-forecasting-i9hcnlhtexlha7gjcepue7.streamlit.app/
+* **Google Colab Verification Pipeline:** https://colab.research.google.com/drive/1K5c7hFUswqDO3_QbppcOmga-AaH0IUD7?usp=sharing
 
 ### Speaker Script
 "Good morning, respected judges from Google, Zindi, and ClimateVerse. I am Ganesh Patil, representing Team AQI Oracles from Pimpri Chinchwad University, Pune. Today, we are honored to present our complete end-to-end solution for the Google Mumbai Data Challenge. We did not merely fit standard gradient boosting models to tabular numbers. Instead, we developed a physics-informed atmospheric framework that couples real Open-Meteo meteorological vectors, station-adaptive diurnal harmonics, and closed-form parabolic calibration to forecast PM2.5 with mathematical rigor. Furthermore, to deliver real-world civic impact, we built and deployed Mumbai BreatheWatch AI—an enterprise-grade application powered by Google Gemini AI that turns these predictions into actionable clean-air commuting and health intelligence for Mumbai's 21 million citizens, live right now at our public deployment URL."
@@ -271,6 +273,7 @@ flowchart TD
     * Powers geospatial map layers with color-coded CPCB index bands, interactive hover telemetry, and coastal ventilation vectors.
   * **Google Colab Cloud Integration:**
     * Complete pipeline reproduces end-to-end inside standard Google Colab with 100% bit-level reproducibility in under 10 seconds.
+    * Verified 1-Click Colab Notebook: https://colab.research.google.com/drive/1K5c7hFUswqDO3_QbppcOmga-AaH0IUD7?usp=sharing
 
 ### Speaker Script
 "Slide 10 highlights our deep integration with the Google developer ecosystem. We integrated Google Gemini AI as an event-driven conversational assistant. Citizens can ask real-world questions such as: 'My grandmother has mild asthma in Malad West—what hours should she avoid opening balcony windows?' Gemini analyzes current model predictions, boundary layer stagnation, and clinical guidelines to recommend closing windows between 7:00 AM and 10:30 AM while safely ventilating during the 3:30 PM sea-breeze clearance. For cartography, we utilize Google Maps styling, and for evaluation, our entire solution reproduces seamlessly in Google Colab with zero external dependencies."

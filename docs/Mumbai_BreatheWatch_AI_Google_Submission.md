@@ -19,6 +19,7 @@
 | **Official Selected Submissions** | Selection 1: `VTjUBvJm` (Master Weather ML Champion) <br> Selection 2: `nhowl8cC` (Barbell Low Hedge) |
 | **Ground Truth Audit** | 1,284 Locked Observations (0.0000 RMSE) |
 | **GitHub Repository** | https://github.com/GaneshPatil7517/mumbai-air-quality-forecasting |
+| **Google Colab Notebook** | [https://colab.research.google.com/drive/1K5c7hFUswqDO3_QbppcOmga-AaH0IUD7?usp=sharing](https://colab.research.google.com/drive/1K5c7hFUswqDO3_QbppcOmga-AaH0IUD7?usp=sharing) |
 | **Application Source** | `app/app.py` & `streamlit_app.py` (Streamlit Enterprise Web Application) |
 | **Evaluation Window** | 11-12 November 2026 (Unseen 192 Station-Hours Private Test Block) |
 
@@ -161,6 +162,7 @@ Enables urban planners at the Brihanmumbai Municipal Corporation (BMC) to simula
 ### 6.1 Project Access Links
 * **Live Deployed Application:** https://mumbai-air-quality-forecasting-i9hcnlhtexlha7gjcepue7.streamlit.app/
 * **GitHub Repository:** https://github.com/GaneshPatil7517/mumbai-air-quality-forecasting
+* **Google Colab Verified Pipeline:** https://colab.research.google.com/drive/1K5c7hFUswqDO3_QbppcOmga-AaH0IUD7?usp=sharing
 * **Application Source Code:** `app/app.py` & `streamlit_app.py`
 * **Forecast Dataset Export:** Built-in one-click CSV export with complete 48-hour station trajectories, wind speed vectors, and stagnation parameters.
 
