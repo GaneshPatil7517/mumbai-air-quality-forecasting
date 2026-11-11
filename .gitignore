@@ -38,7 +38,6 @@ models/*
 /Test.csv
 /SampleSubmission.csv
 /Train Phase 4.csv
-/Train last phase.csv
 /gbm_final_high3.csv
 /gbm_final_low.csv
 /submission_v95_*.csv
