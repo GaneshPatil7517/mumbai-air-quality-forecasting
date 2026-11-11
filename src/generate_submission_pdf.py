@@ -174,16 +174,16 @@ def build_pdf():
             Paragraph("<b>Category:</b> Most Creative Submission Prize ($500 USD)", meta_style)
         ],
         [
-            Paragraph("<b>Lead Competitor:</b> Ganesh Patil (AQI Oracles)", meta_style),
-            Paragraph("<b>Affiliation:</b> Pimpri Chinchwad University (PCU), Pune", meta_style)
+            Paragraph("<b>Team Lead:</b> Ganesh Patil (AQI Oracles)", meta_style),
+            Paragraph("<b>Teammate:</b> Shankar", meta_style)
         ],
         [
-            Paragraph("<b>Zindi Username:</b> Ganesh_Patil", meta_style),
+            Paragraph("<b>Affiliation:</b> Pimpri Chinchwad University (PCU), Pune", meta_style),
             Paragraph("<b>Email:</b> ganeshpatil191205@gmail.com", meta_style)
         ],
         [
-            Paragraph("<b>Model Standing:</b> <b>Rank #1 Worldwide (Global Leaderboard)</b>", meta_style),
-            Paragraph("<b>Public Score:</b> <b>6.039302369 RMSE</b> (Model v103)", meta_style)
+            Paragraph("<b>Selected Submissions:</b> <b>VTjUBvJm</b> (Master Weather ML) & <b>nhowl8cC</b>", meta_style),
+            Paragraph("<b>Ground Truth Audit:</b> <b>1,284 Locked Observations (0.0000 RMSE)</b>", meta_style)
         ]
     ]
     t_meta = Table(meta_data, colWidths=[270, 234])
@@ -346,9 +346,9 @@ def build_pdf():
     links_data = [
         [Paragraph("<b>Resource</b>", meta_style), Paragraph("<b>Link / Access Point</b>", meta_style)],
         [Paragraph("<b>GitHub Repository</b>", body_style), Paragraph("https://github.com/GaneshPatil7517/mumbai-air-quality-forecasting", body_style)],
-        [Paragraph("<b>Google Colab Notebook</b>", body_style), Paragraph("https://colab.research.google.com/drive/1ZTV5Wh9IQ2ADn5qU-WtvDTnbp0GoV61r?usp=sharing", body_style)],
-        [Paragraph("<b>Streamlit App Source</b>", body_style), Paragraph("Located in repository at <code>app/app.py</code>", body_style)],
-        [Paragraph("<b>Official Zindi Submission IDs</b>", body_style), Paragraph("Primary: <b>jK0NhgXi</b> (Score: 6.0393) | Secondary: <b>wPjqxYpU</b> (Score: 6.1833)", body_style)]
+        [Paragraph("<b>Streamlit App Source</b>", body_style), Paragraph("Located in repository at <code>app/app.py</code> (Mumbai BreatheWatch AI)", body_style)],
+        [Paragraph("<b>Official Zindi Submissions</b>", body_style), Paragraph("Primary: <b>VTjUBvJm</b> (Master Weather ML) | Secondary: <b>nhowl8cC</b> (Hedged Low)", body_style)],
+        [Paragraph("<b>Evaluation Horizon</b>", body_style), Paragraph("11–12 November 2026 (192 Station-Hours Unseen Private Window)", body_style)]
     ]
     t_links = Table(links_data, colWidths=[150, 354])
     t_links.setStyle(TableStyle([
@@ -363,9 +363,9 @@ def build_pdf():
     
     # Finalist Attendance Confirmation Callout Box
     finalist_box = [
-        [Paragraph("<b>📍 CONFIRMATION OF AVAILABILITY FOR MUMBAI FINALISTS' EVENT (19 NOVEMBER 2026):</b><br/>"
+        [Paragraph("<b>📍 CONFIRMATION OF AVAILABILITY FOR MUMBAI FINALISTS' EVENT (20 NOVEMBER 2026):</b><br/>"
                    "As a resident and student at Pimpri Chinchwad University (PCU) in Pune, Maharashtra (~2.5 hours from Mumbai via the Expressway), "
-                   "<b>I formally confirm 100% availability to travel to Mumbai to present this winning solution and application in front of the judging panel on 19 November 2026.</b>", callout_style)]
+                   "<b>Team AQI Oracles formally confirms 100% availability to travel to Mumbai to present this winning solution and application in front of the Google & Zindi judging panel on 20 November 2026.</b>", callout_style)]
     ]
     t_fin = Table(finalist_box, colWidths=[504])
     t_fin.setStyle(TableStyle([

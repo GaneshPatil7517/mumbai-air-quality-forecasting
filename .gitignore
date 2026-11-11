@@ -18,9 +18,13 @@ data/raw/*
 !data/raw/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
+!data/processed/mumbai_weather_hourly_phase4.csv
 submissions/*
 !submissions/.gitkeep
 !submissions/README.md
+!submissions/submission_final_phase_master_champion.csv
+!submissions/submission_final_phase_robust_seasonal_hybrid.csv
+!submissions/gbm_final_low.csv
 !submissions/submission_v95_optimal_station_adaptive_diurnal.csv
 !submissions/submission_v93_station_adaptive_diurnal_champion.csv
 !submissions/submission_v91_station_plus_diurnal_champion.csv
@@ -33,6 +37,10 @@ models/*
 /Train.csv
 /Test.csv
 /SampleSubmission.csv
+/Train Phase 4.csv
+/Train last phase.csv
+/gbm_final_high3.csv
+/gbm_final_low.csv
 /submission_v95_*.csv
 zindi data/Phase 3 Train.csv
 zindi data/AdditionalHistory.zip
