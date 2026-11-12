@@ -51,5 +51,10 @@ Thumbs.db
 *.jpg
 *.zip
 
+# Secrets & local credentials (NEVER commit to git)
+.streamlit/secrets.toml
+secrets.toml
+.env
+
 # Model training artifacts
 catboost_info/
