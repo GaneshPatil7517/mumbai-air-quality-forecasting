@@ -950,7 +950,7 @@ def get_deployment_api_key():
     env_key = os.environ.get("GEMINI_API_KEY", "")
     if env_key:
         return env_key
-    return "AQ.Ab8RN6JS-Dm4Px2reNnm5OFDrShjzHSDNhJs327OjXv-va2irw"
+    return ""
 
 active_gemini_key = get_deployment_api_key()
 enable_live_gemini = True
